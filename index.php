@@ -14,6 +14,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/chuyendi.css" type="text/css">
+    <link rel="stylesheet" href="css/lienhe.css" type="text/css">
 </head>
 
 <body>

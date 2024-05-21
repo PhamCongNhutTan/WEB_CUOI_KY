@@ -13,7 +13,7 @@
             <div class="col-12 col-md-4">
                 <h6>KẾT NỐI VỚI CHÚNG TÔI</h6>
                 <ul>
-                    <li class="social-icon"><a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="social-icon"><a href="https://www.facebook.com/nauteik" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                     <li class="social-icon"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                     <li class="social-icon"><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="social-icon"><a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
