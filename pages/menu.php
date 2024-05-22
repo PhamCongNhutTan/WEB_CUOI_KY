@@ -46,7 +46,7 @@
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form> -->
             </div>
-            <div class="login d-flex ml-auto">
+            <div class="login d-flex ml-auto align-items-center">
                 <?php
                 session_start();
                 if(isset($_GET["dangxuat"])){

@@ -15,6 +15,8 @@
     $count = $result->num_rows;
     if ($count >= 1) {
         $_SESSION["dangnhap"] = $emailOrPhone;
+        $userData = $result->fetch_assoc();
+        $_SESSION["User_ID"] = $userData["User_ID"];
         header("Location:../../index.php");
         exit;
     }else{

@@ -1,5 +1,6 @@
 <?php 
     include("./config/config.php");
+    include("./enities/user.class.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +24,9 @@
 <body>
     <div id="wrapper">
         <?php
+            if(isset($_SESSION["dangnhap"]) && isset($_SESSION["User_ID"])){
+                $user = new User($mysqli, $_SESSION["User_ID"]);
+            }
             include("pages/menu.php");
             include("pages/header.php");
             include("pages/main.php");
