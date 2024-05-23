@@ -54,9 +54,9 @@
                     header("Location:../index.php");
                 }
                 if (!isset($_SESSION['dangnhap'])) {
-                    include("components/login_button.php");
+                    include("./modules/components/login_button.php");
                 }else{
-                    include("components/logout_button.php");
+                    include("./modules/components/logout_button.php");
                 }
                 ?>
             </div>

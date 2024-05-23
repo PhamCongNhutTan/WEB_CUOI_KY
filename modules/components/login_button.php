@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="myform bg-white">
                     <h1 class="text-center text-dark">Đăng nhập</h1>
-                    <form action="./pages/components/XuLyLogin.php" method="POST">
+                    <form action="./modules/components/XuLyLogin.php" method="POST">
                         <div class="mb-3 mt-4">
                             <label for="exampleInputEmail1" class="form-label text-dark">Email / Số điện thoại</label>
                             <input type="text" name ="emailOrPhone" class="form-control" style="margin:0px;" id="exampleInputEmail1" aria-describedby="emailHelp">
