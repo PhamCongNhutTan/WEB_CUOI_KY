@@ -12,12 +12,12 @@
 
   <div class="form-group">
     <label for="">Tóm tắt nội dung</label>
-    <input type="text" class="form-control" id="" name="tomtat">
+    <textarea type="text" class="form-control" id="tomtat" name="tomtat"></textarea>
   </div>
 
   <div class="form-group">
     <label for="">Nội dung chi tiết</label>
-    <input type="text" class="form-control" id="" name="noidung">
+    <textarea type="text" class="form-control" id="noidung" name="noidung"></textarea>
   </div>
   
   <div class="form-group">

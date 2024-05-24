@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/chuyendi.css" type="text/css">
     <link rel="stylesheet" href="css/lienhe.css" type="text/css">
+    <link rel="stylesheet" href="css/tintuc.css" type="text/css">
     <link rel="stylesheet" href="css/modalLogin.css">
 </head>
 

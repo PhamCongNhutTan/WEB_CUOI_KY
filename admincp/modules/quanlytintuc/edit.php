@@ -21,12 +21,12 @@
 
   <div class="form-group">
     <label for="">Tóm tắt nội dung</label>
-    <textarea class="form-control" name="tomtat" style="resize: none;" rows="10" ><?php echo $row['tomtat']?></textarea>
+    <textarea class="form-control" id="tomtat" name="tomtat" style="resize: none;" rows="10" ><?php echo $row['tomtat']?></textarea>
   </div>
 
   <div class="form-group">
     <label for="">Nội dung chi tiết</label>
-    <textarea class="form-control" name="noidung" style="resize: none;" rows="10" ><?php echo $row['noidung']?></textarea>
+    <textarea class="form-control" id="noidung" name="noidung" style="resize: none;" rows="10" ><?php echo $row['noidung']?></textarea>
   </div>
   
   <div class="form-group">
