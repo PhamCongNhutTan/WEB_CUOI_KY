@@ -17,7 +17,7 @@
         $_SESSION["dangnhap"] = $emailOrPhone;
         $userData = $result->fetch_assoc();
         $_SESSION["User_ID"] = $userData["User_ID"];
-        header("Location:../../index.php");
+        header("Location:../../");
         exit;
     }else{
         echo "$emailOrPhone, $password, $count";

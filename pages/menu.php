@@ -11,7 +11,7 @@
                         <a class="nav-link active" href="index.php">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?quanly=chuyendi&id=1">Chuyến đi</a>
+                        <a class="nav-link" href="?quanly=chuyendi&id=1">Chuyến đi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?quanly=tintuc">Tin tức</a>
@@ -48,10 +48,9 @@
             </div>
             <div class="login d-flex ml-auto align-items-center">
                 <?php
-                session_start();
                 if(isset($_GET["dangxuat"])){
                     unset($_SESSION["dangnhap"]);
-                    header("Location:../index.php");
+                    header("Location:../");
                 }
                 if (!isset($_SESSION['dangnhap'])) {
                     include("./modules/components/login_button.php");

@@ -1,24 +1,34 @@
+<?php
+include_once("./enities/tour.class.php");
+include_once("./modules/tour_controller.php");
+?>
 <div class="container" id="chuyendi">
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <div class="tour-image"></div>
-        </div>
-        <div class="col-12 col-md-6">
-            <p class="price">10000000 VND</p>
-            <div class="tour-content">
-                <a href="">
-                    <h4>Hallstatt, Austria</h4>
-                </a>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>
-                <p>Là một ngôi làng cổ kính nằm bên hồ Hallstätter See, nổi tiếng với vẻ đẹp thơ
-                    mộng, những ngôi nhà gỗ xinh xắn, và di sản văn hóa thế giới UNESCO, thu hút du khách từ khắp nơi
-                    trên thế giới.</p>
-                <button class="btn-by-tour">Mua chuyến đi</button>
-            </div>
-        </div>
-    </div>
+    <?php
+        $tourController = new TourController();
+        $tourList = $tourController->getTours();
+        foreach ($tourList as $tour) {
+            echo '<div class="row my-5" style="cursor: pointer; user-select: none;" onclick=\'location.href="#"\'>
+                    <div class="col-12 col-md-6">
+                        <img class="tour-image" src="./images/tour/'.$tour->getTourID().'/'.$tour->getImagePath().'">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="price">'.$tour->getBasePrice().' VND</p>
+                        <div class="tour-content">
+                            <a href="">
+                                <h4>'.$tour->getName().'</h4>
+                            </a>
+                            <h7 style="display: block;" >'.$tour->getLocation().'</h7>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <p>'.$tour->getDescription().'</p>
+                            <a href="" class="btn-by-tour">Mua chuyến đi</a>
+                        </div>
+                    </div>
+                </div>';
+        }
+
+    ?>
 </div>

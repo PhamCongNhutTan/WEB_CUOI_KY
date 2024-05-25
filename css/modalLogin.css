@@ -1,5 +1,4 @@
 .btn:hover{
-  transition: 0.5s;
   color: black;
   background: white!important;
   border-radius: 5px;
@@ -77,11 +76,7 @@ h1 {
   border-color: #fff;
 }
 
-p {
-  text-align: center;
-  padding-top: 2em;
-  color: grey;
-}
+
 
 p a {
   color: #e1e1e1;
