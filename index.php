@@ -1,7 +1,3 @@
-<?php
-include("./config/config.php");
-include("./enities/user.class.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +21,13 @@ include("./enities/user.class.php");
     <div id="wrapper">
         <?php
         session_start();
+        include("./config/config.php");
+        include("./enities/user.class.php");
         if (isset($_SESSION["dangnhap"]) && isset($_SESSION["User_ID"])) {
-            $user = new User($mysqli, $_SESSION["User_ID"]);
+            $user = new User($_SESSION["User_ID"]);
+        }
+        if (isset($_SESSION["role"]) && $_SESSION["role"] == "admin"){
+            header("Location:./admincp");
         }
         include("pages/menu.php");
         include("pages/header.php");

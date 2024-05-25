@@ -27,5 +27,14 @@
         </li> -->
       </ul>
     </div>
+    <?php
+      if (isset($_GET["dangxuat"])) {
+        session_destroy();
+        header("Location:../");
+      }
+      if (isset($_SESSION['dangnhap'])) {
+        include("./modules/components/logout_button.php");
+      }
+    ?>
   </div>
 </nav>

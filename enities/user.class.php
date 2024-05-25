@@ -6,16 +6,17 @@
         private $imagePath;
         private $role;
         
-        public function __construct($mysqli, $userID)
+        public function __construct($userID)
         {
-            $query = $mysqli->prepare("SELECT * FROM User WHERE User_ID = ".$userID);
-            $query->execute();
-            $result = $query->get_result();
-            $row = $result->fetch_assoc();
-            $this->email = $row["Email"];
-            $this->phone = $row["Phone"];
-            $this->imagePath = $row["ImagePath"];
-            $this->role = $row["Role"];
+                global $mysqli;
+                $query = $mysqli->prepare("SELECT * FROM User WHERE User_ID = ".$userID);
+                $query->execute();
+                $result = $query->get_result();
+                $row = $result->fetch_assoc();
+                $this->email = $row["Email"];
+                $this->phone = $row["Phone"];
+                $this->imagePath = $row["ImagePath"];
+                $this->role = $row["Role"];
         }
 
         /**
