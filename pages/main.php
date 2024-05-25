@@ -13,6 +13,8 @@
             include('main_content/tintuc.php');
         } else if ($temp == 'lienhe') {
             include('main_content/lienhe.php');
+        } else if ($temp == 'chitiettintuc') {
+            include('main_content/chitiettintuc.php');
         } else if ($temp == 'giohang') {
             include('main_content/giohang.php');
         } else {

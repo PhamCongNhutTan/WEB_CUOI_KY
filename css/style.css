@@ -95,7 +95,7 @@
     background-color: whitesmoke;
 }
 
-.card-img-top {
+#our-team .card-img-top {
     border-radius: 50% !important;
     width: 50%;
     margin: 0 auto;
