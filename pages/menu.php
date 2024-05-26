@@ -11,7 +11,7 @@
                         <a class="nav-link active" href="index.php">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?quanly=chuyendi&id=1">Chuyến đi</a>
+                        <a class="nav-link" href="?quanly=chuyendi">Chuyến đi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?quanly=tintuc">Tin tức</a>

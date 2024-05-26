@@ -1,10 +1,14 @@
-.btn:hover{
+.btn:hover {
   color: black;
-  background: white!important;
+  background: white !important;
   border-radius: 5px;
-  
-}
 
+}
+#nothover.btn:hover{
+  color: #fff!important;
+  background-color: #bb2d3b!important;
+  border-color: #b02a37!important;
+}
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -85,4 +89,15 @@ p a {
 
 p a:hover {
   color: #fff;
+}
+
+button a#admin {
+  color: white;
+}
+
+
+
+button a#admin:hover, button#admin:hover {
+  color: #000000;
+  transition: 0.25s;
 }

@@ -1,0 +1,50 @@
+#create.btn:hover, #create.btn:active {
+    box-shadow: 0 0 3px 1px green;
+}
+
+table#tour th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 1.5em;
+    /* Adjust this value as needed */
+    vertical-align: middle;
+}
+
+table#tour a {
+    text-wrap: nowrap;
+}
+
+#tour.table th,
+.table td {
+    vertical-align: middle;
+    /* Ensures vertical alignment */
+}
+
+#tour.btn {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    /* Adjust spacing between buttons */
+}
+
+#tour.btn a {
+    white-space: nowrap;
+    text-decoration: none;
+    color: white;
+}
+
+#tour.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 0.5em;
+    /* Adjust padding for better alignment */
+}
+
+#tour.btn i {
+    font-size: 1.2em;
+    /* Adjust icon size as needed */
+}

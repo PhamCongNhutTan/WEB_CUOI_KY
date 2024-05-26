@@ -8,7 +8,6 @@
         private $type;
         private $description;
         
-        
 
         /**
          * Get the value of tourID
