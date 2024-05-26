@@ -7,6 +7,7 @@
 ?>
 <!-- Chua CSS -->
 <h3 class="text-center"><?php echo $row_post_title['tieude'] ?></h3> 
+<div class="container">
 <?php
     while($row = mysqli_fetch_array($query_all)){
         ?>
@@ -16,3 +17,4 @@
 <?php
         }   
 ?>
+</div>
