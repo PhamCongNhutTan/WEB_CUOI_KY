@@ -26,9 +26,6 @@
         if (isset($_SESSION["dangnhap"]) && isset($_SESSION["User_ID"])) {
             $user = new User($_SESSION["User_ID"]);
         }
-        if (isset($_SESSION["role"]) && $_SESSION["role"] == "admin"){
-            header("Location:./admincp");
-        }
         include("pages/menu.php");
         include("pages/header.php");
         include("pages/main.php");

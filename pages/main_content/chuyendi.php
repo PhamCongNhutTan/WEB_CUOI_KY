@@ -24,7 +24,7 @@ include_once("./modules/tour_controller.php");
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star-half-stroke"></i>
                             <p>'.$tour->getDescription().'</p>
-                            <a href="" class="btn-by-tour">Mua chuyến đi</a>
+                            <a href="" class="btn-by-tour">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>';

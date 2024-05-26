@@ -1,8 +1,8 @@
-.btn:hover{
+.btn:hover {
   color: black;
-  background: white!important;
+  background: white !important;
   border-radius: 5px;
-  
+
 }
 
 .btn:focus {
@@ -85,4 +85,15 @@ p a {
 
 p a:hover {
   color: #fff;
+}
+
+button a#admin {
+  color: white;
+}
+
+
+
+button a#admin:hover, button#admin:hover {
+  color: #000000;
+  transition: 0.25s;
 }

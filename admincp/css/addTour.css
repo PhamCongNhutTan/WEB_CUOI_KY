@@ -1,0 +1,21 @@
+.bar {
+    padding-top: 8px;
+    margin: 8px;
+    position: relative;
+}
+
+.bar::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    /* Width of the vertical column */
+    height: 80%;
+    /* Height of the vertical column */
+    background-color: green;
+    /* Color of the vertical column */
+    margin-right: 10px;
+    /* Space between the column and the text */
+    vertical-align: middle;
+    /* Align the column with the text */
+    position: absolute;
+}

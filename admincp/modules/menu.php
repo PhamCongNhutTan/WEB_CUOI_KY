@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=quanlychuyendi&query=them">Quản lý chuyến đi</a>
+          <a class="nav-link" href="index.php?action=quanlychuyendi&query=view">Quản lý chuyến đi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=quanlytintuc&query=them">Quản lý tin tức</a>
