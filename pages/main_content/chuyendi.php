@@ -1,5 +1,5 @@
-
-<div id="notification" style="width: 300px; position: fixed; top: 100px; right: 10px;" class="mt-3 d-none text-center alert alert-success alert-dismissible" role="alert">Thêm chuyến đi thành công</div>
+<div id="notification" style="width: 300px; position: fixed; top: 100px; right: 10px;"
+  class="mt-3 d-none text-center alert alert-success alert-dismissible" role="alert">Thêm chuyến đi thành công</div>
 <div class="container" id="chuyendi">
   <?php
   $tourController = new TourController();
@@ -34,10 +34,10 @@
   ?>
 </div>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     const forms = document.querySelectorAll("#addCartForm");
-    forms.forEach(function(form) {
-      form.addEventListener("submit", function(e) {
+    forms.forEach(function (form) {
+      form.addEventListener("submit", function (e) {
         e.preventDefault(); // Prevent default form submission
 
         var formData = new FormData(this);
@@ -45,11 +45,11 @@
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "./modules/cart.php", true);
-        xhr.onload = function() {
+        xhr.onload = function () {
           if (xhr.status === 200) {
             document.getElementById("notification").classList.remove("d-none");
             form.reset();
-            setTimeout(function() {
+            setTimeout(function () {
               document.getElementById("notification").classList.add("d-none");
             }, 3000); // Hide notification after 3 seconds
           } else {
@@ -57,7 +57,7 @@
             console.error(xhr.responseText);
           }
         };
-        xhr.onerror = function() {
+        xhr.onerror = function () {
           console.error("Request failed");
         };
         xhr.send(formData);
