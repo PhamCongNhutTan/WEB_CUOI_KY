@@ -21,23 +21,23 @@
             </div>
         </div>
     </div>
-    <form>
+    <form method="POST" action="admincp/modules/thongtinlienhe/excute.php" enctype="multipart/form-data">
         <div class="row">
             <h3>Để lại lời nhắn cho chúng tôi</h3>
             <div class="col-12 col-md-4">
-                <input type="text" class="form-control" id="contact-form-name" placeholder="Tên của bạn">
+                <input type="text" class="form-control" id="lh_ten" placeholder="Tên của bạn" name="name">
             </div>
             <div class="col-12 col-md-4">
-                <input type="email" class="form-control" id="contact-form-email" aria-describedby="emailHelp" placeholder="Email">
+                <input type="email" class="form-control" id="lh-email" aria-describedby="emailHelp" placeholder="Email" name="gmail">
                 <div id="emailHelp" class="form-text">Chúng tôi sẽ không chia sẻ email của bạn với bất kỳ ai.</div>
             </div>
             <div class="col-12 col-md-4">
-                <input type="tel" class="form-control" id="contact-form-phone" placeholder="Số điện thoại">
+                <input type="tel" class="form-control" id="lh_phone" placeholder="Số điện thoại" name="phone">
             </div>
             <div class="col-12">
-                <textarea type="text" class="form-control" id="contact-form-message" placeholder="Thông điệp" rows="5"></textarea>
+                <textarea type="text" class="form-control" id="lh_message" placeholder="Thông điệp" rows="5" name="message"></textarea>
             </div>
         </div>
-        <button type="submit" class="btn btn-send-message" id="btn-send-message">Gửi Thông Điệp</button>
+        <button type="submit" class="btn btn-send-message" name="guithongdiep">Gửi Thông Điệp</button>
     </form>
 </div>

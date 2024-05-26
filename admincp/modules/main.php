@@ -15,6 +15,9 @@
         elseif ($temp == 'quanlytintuc' && $query == 'edit'){
             include("modules/quanlytintuc/edit.php");
         }
+        elseif ($temp == 'thongtinlienhe' && $query == 'xem'){
+            include("modules/thongtinlienhe/list.php");
+        }
         else{
             include("modules/dashboard.php");
         }
