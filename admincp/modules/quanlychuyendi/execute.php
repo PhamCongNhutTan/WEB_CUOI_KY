@@ -17,7 +17,7 @@ if (isset($_POST["addTour"])) {
         http_response_code(500);
     }
 }
-if (isset($_POST["editTour"])){
+elseif (isset($_POST["editTour"])){
     $tourID = $_POST["tourID"];
     $name = $_POST["name"];
     $location = $_POST["location"];

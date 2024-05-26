@@ -30,17 +30,17 @@
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("addTourBtn").addEventListener("click", function(e) {
+    const form = document.getElementById("addTourForm");
+    form.addEventListener("submit", function(e) {
       e.preventDefault(); // Prevent default form submission
-      var formData = new FormData(document.getElementById("addTourForm"));
+      var formData = new FormData(this);
       formData.append("addTour", "true");
       var xhr = new XMLHttpRequest();
       xhr.open("POST", "modules/quanlychuyendi/execute.php", true);
       xhr.onload = function() {
         if (xhr.status === 200) {
-          // Success handling
           document.getElementById("notification").classList.remove("d-none");
-          document.getElementById("addTourForm").reset(); // Reset the form
+          form.reset(); // Reset the form
           setTimeout(function() {
             document.getElementById("notification").classList.add("d-none");
           }, 3000); // Hide notification after 3 seconds

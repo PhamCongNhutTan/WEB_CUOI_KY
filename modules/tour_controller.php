@@ -59,7 +59,7 @@ class TourController
             mkdir($tourImagesPath, 0777, true);
         }
         // Thêm Tour
-        $query = "INSERT INTO Tour(Name, Location, BasePrice, ImagePath, Type, Description) VALUES ('" . $name . "', '" . $location . "', '" . $basePrice . "', '" . $imagePath . "', '" . $type . "', '" . $description . "');";
+        $query = "INSERT INTO Tour(Name, Location, BasePrice, ImagePath, Type, Description) VALUES ('" . $name . "', '" . $location . "', '" . $basePrice . "', '" . $imagePath . "', '" . $type . "', '" . $description . "')";
         $result = mysqli_query($mysqli, $query);
         $move = move_uploaded_file($temp_imagePath, $tourImagesPath . "/" . $imagePath);
         return $result && $move;
