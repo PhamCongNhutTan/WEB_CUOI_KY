@@ -1,5 +1,5 @@
 <div class="clear" style="clear:both;"></div>
-<div class="main">
+<div id="main">
     <?php
         if (isset($_GET['action'])){
             $temp = $_GET['action'];
