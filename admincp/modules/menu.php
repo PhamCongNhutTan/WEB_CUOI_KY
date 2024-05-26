@@ -15,6 +15,9 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=quanlytintuc&query=them">Quản lý tin tức</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=thongtinlienhe&query=xem">Thông tin liên hệ</a>
+        </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown link

@@ -3,6 +3,9 @@ include_once("../enities/tour.class.php");
 include_once("../modules/tour_controller.php");
 if (isset($_GET["type"])) {
     $type = $_GET["type"];
+}else
+{
+    $type = "";
 }
 ?>
 <a style="text-decoration: none;" href="?action=quanlychuyendi&query=add">

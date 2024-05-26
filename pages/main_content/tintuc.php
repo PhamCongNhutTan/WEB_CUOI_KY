@@ -7,8 +7,8 @@
     <div class="row">
         <?php
         while ($row = mysqli_fetch_array($query_tintuc)){
+            if ($row['tinhtrang'] == '1'){
         ?>  
-
             <div class="col-6 col-md-4 col-lg-3 ">
                 <div class="card">
                 <img class="card-img-top" src="admincp/modules/quanlytintuc/uploads/<?php echo $row['hinhanh'] ?>" alt="Card image cap">
@@ -22,6 +22,7 @@
             </div>
         
         <?php  
+            }
         }
         ?>
     </div>
