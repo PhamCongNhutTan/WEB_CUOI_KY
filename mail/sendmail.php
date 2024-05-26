@@ -17,8 +17,10 @@ require 'PHPMailer/src/SMTP.php';
 // require 'PHPMailer/src/OAuth.php';
 // require 'PHPMailer/src/POP3.php';
 
-
-$mail = new PHPMailer(true);                              
+class Mailer{
+    public function sendMessage($mailKH,$message){
+        $mail = new PHPMailer(true);
+        $mail->CharSet = 'UTF-8';                             
 try {
     //Server settings
     $mail->SMTPDebug = 2;                                 
@@ -33,7 +35,7 @@ try {
     //Recipients
     $mail->setFrom('dbmanagerteam@gmail.com', 'HKT\'s Website');
 
-    $mail->addAddress('phathai2902@gmail.com', 'User'); 
+    $mail->addAddress($mailKH, 'User'); 
  
     // //Attachments
     // $mail->addAttachment('/var/tmp/file.tar.gz');        
@@ -41,8 +43,8 @@ try {
 
     //Content
     $mail->isHTML(true);                                  
-    $mail->Subject = 'Reply your requirement';
-    $mail->Body    = 'Cảm ơn bạn đã gửi yêu cầu đến chúng tôi về website <3';
+    $mail->Subject = "Phản hồi yêu cầu";
+    $mail->Body    = $message;
     // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
  
     $mail->send();
@@ -50,4 +52,7 @@ try {
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
+    }
+}
+
 ?>
