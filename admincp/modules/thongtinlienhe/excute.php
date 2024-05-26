@@ -1,7 +1,7 @@
 
 <?php
     include('../../config/config.php');
-    
+    require('../../../mail/sendmail.php');
     $name = $_POST['name'];
     $gmail = $_POST['gmail'];
     $phone = $_POST['phone'];
@@ -14,6 +14,18 @@
         ('".$name."','".$gmail."','".$phone."','".$message."')";
 
         mysqli_query($mysqli, $sql_insert);
+
+        $mailer = new Mailer();
+        $noidung = "<div>
+        <h3> Cảm ơn ".$name." đã liên hệ với chúng tôi</h3>
+        <p> Chúng tôi xin xác nhận thông tin của bạn như sau:</p><br>
+        <p> Tên người liên hệ: $name</p><br>
+        <p> Số điện thoại: $phone</p><br>
+        <p> Nội dung: $message</p><br>
+        <p> Chúng tôi sẽ liên hệ bạn trong thời gian sớm nhất!</p><br>
+        <p> Trân trọng! </p><br>
+        </div>";
+        $mailer->sendMessage($gmail, $noidung);
 
         header('Location: ../../../index.php?quanly=lienhe');
     
