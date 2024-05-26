@@ -39,6 +39,7 @@
     text-decoration: none;
     color: #079992;
 }
+
 .btn-by-tour {
     padding: 10px;
     display: inline-block;
@@ -50,6 +51,7 @@
     text-decoration: none;
     color: black;
 }
+
 a.btn-by-tour:hover, a.btn-by-tour:active{
     text-decoration: none;
     color: black;

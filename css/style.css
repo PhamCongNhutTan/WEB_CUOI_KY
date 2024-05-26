@@ -1,6 +1,6 @@
 /* COLOR 
-    #0a3d62
-    #079992
+    #006266
+    #38ada9
 */
 
 
@@ -22,7 +22,7 @@
 /* --------------------MENU-------------------- */
 
 .navbar {
-    background-color: #0a3d62 !important;
+    background-color: #006266 !important;
     color: white !important;
     font-size: 14px;
 }
@@ -71,7 +71,7 @@
 .card-body i {
     font-size: 30px;
     padding-bottom: 10px;
-    color: #079992;
+    color: #38ada9;
 }
 
 .card-body p {
@@ -79,7 +79,7 @@
 }
 
 .card-body h5:hover {
-    color: #079992;
+    color: #38ada9;
 }
 
 /* ----------Our team---------- */
@@ -105,7 +105,7 @@
 
 #our-team .card:hover .card-img-top,
 #our-team .card:active .card-img-top {
-    outline: 4px solid #079992;
+    outline: 4px solid #38ada9;
     margin-top: -65px;
     margin-bottom: 10px;
 }
@@ -113,7 +113,7 @@
 /* --------------------FOOTER-------------------- */
 #footer {
     padding-top: 20px;
-    background-color: #0a3d62;
+    background-color: #006266;
 }
 
 #footer h6 {
@@ -134,7 +134,7 @@
 }
 
 #footer i {
-    color: #079992;
+    color: #38ada9;
 }
 
 .social-icon {
@@ -148,7 +148,7 @@
 
 footer {
     text-align: center;
-    background-color: #0c2461;
+    background-color: #0a3d62;
     color: white;
     padding: 20px;
 }

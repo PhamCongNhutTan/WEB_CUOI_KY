@@ -2,7 +2,7 @@
 $sql_selectAll = "SELECT * FROM contact";
 $query_selectAll = mysqli_query($mysqli, $sql_selectAll);
 ?>
-<div class="container">
+<div class="container" id="list-ttlh">
   <h3>Tất cả bài viết</h3>
   <table class="table table-striped">
     <thead>
