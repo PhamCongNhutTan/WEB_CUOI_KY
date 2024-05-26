@@ -4,7 +4,11 @@
   border-radius: 5px;
 
 }
-
+#nothover.btn:hover{
+  color: #fff!important;
+  background-color: #bb2d3b!important;
+  border-color: #b02a37!important;
+}
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
