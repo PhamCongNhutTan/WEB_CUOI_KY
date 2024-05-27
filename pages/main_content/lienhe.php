@@ -35,9 +35,9 @@
                 <input type="tel" class="form-control" id="lh_phone" placeholder="Số điện thoại" name="phone">
             </div>
             <div class="col-12">
-                <textarea type="text" class="form-control" id="lh_message" placeholder="Thông điệp" rows="5" name="message"></textarea>
+                <textarea type="text" class="form-control" id="lh_message" placeholder="Lời nhắn" rows="5" name="message"></textarea>
             </div>
         </div>
-        <button type="submit" class="btn btn-send-message" name="guithongdiep">Gửi Thông Điệp</button>
+        <button type="submit" class="btn-send-message" name="guithongdiep">Gửi Lời Nhắn</button>
     </form>
 </div>
