@@ -7,11 +7,16 @@ $row_post_title = mysqli_fetch_array($query);
 ?>
 <!-- Chua CSS -->
 <h3 class="text-center"><?php echo $row_post_title['tieude'] ?></h3>
-<div class="container">
+<div class="container" id="cttt">
     <?php
     while ($row = mysqli_fetch_array($query_all)) {
         ?>
-        @@ -16,3 +17,4 @@
+        <div class="clearfix">
+            <img class="image-cttt" src="admincp/modules/quanlytintuc/uploads/<?php echo $row['hinhanh'] ?>"
+                alt="Cardimagecap">
+            <div class="space"></div>
+            <p class="text-cttt"><?php echo $row['noidung'] ?></p>
+        </div>
         <?php
     }
     ?>

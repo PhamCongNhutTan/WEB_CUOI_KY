@@ -1,3 +1,50 @@
 #tintuc .card {
     height: 400px;
 }
+
+#tintuc .card-body {
+    transition: all 0.5s;
+}
+
+#tintuc .card-image-top:hover ~ .card-body,
+#tintuc .card-image-top:active ~ .card-body{
+    filter: blur(3px);
+    background-color: lightgray;
+}
+
+.tintuc-tilte {
+    color: black;
+    text-decoration: none;
+}
+
+/* ----------Chi tiet tin tuc---------- */
+#cttt {
+    border: 1px black solid;
+    padding: 0px;
+    padding-right: 10px;
+    margin: 20px auto;
+}
+
+.image-cttt {
+    width: 50%;
+    padding: 30px;
+    margin-right: 20px;
+    display: inline;
+    float: left;
+    transition: all 0.5s;
+}
+
+.image-cttt:hover,
+.image-cttt::after {
+    transform: scale(1.1);
+}
+
+#cttt .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.space {
+    height: 10px;
+}

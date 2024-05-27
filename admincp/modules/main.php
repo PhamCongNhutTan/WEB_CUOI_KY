@@ -26,5 +26,8 @@
                 case "edit": include("modules/quanlychuyendi/editTour.php"); break;
             }
         }
+        if ($temp == '') {
+            include("modules/quanlychuyendi/viewTour.php");
+        }
     ?>
 </div>

@@ -25,12 +25,22 @@
     background-color: #006266 !important;
     color: white !important;
     font-size: 14px;
+    padding-bottom: 6px;
 }
 
 #menu .nav-link {
     color: white !important;
     font-size: 22px;
+    border-bottom: 2px #006266 solid;
+    transition: all 0.4s;
+    margin-right: 20px;
 }
+
+#menu .nav-link:hover,
+#menu .nav-link:active {
+    border-bottom: 2px white solid;
+}
+
 
 .icon {
     margin: 0 auto;

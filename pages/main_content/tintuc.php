@@ -11,9 +11,9 @@
         ?>  
             <div class="col-6 col-md-4 col-lg-3 ">
                 <div class="card">
-                <img class="card-img-top" src="admincp/modules/quanlytintuc/uploads/<?php echo $row['hinhanh'] ?>" alt="Card image cap">
+                <img class="card-image-top" src="admincp/modules/quanlytintuc/uploads/<?php echo $row['hinhanh'] ?>" alt="Card image cap">
                 <div class="card-body">
-                    <a href="index.php?quanly=chitiettintuc&id=<?php echo $row['post_id'] ?>">
+                    <a class="tintuc-tilte" href="index.php?quanly=chitiettintuc&id=<?php echo $row['post_id'] ?>">
                     <h5 class="card-title"><?php echo $row['tieude']?></h5>
                     </a>
                     <?php echo $row['tomtat']?></p>

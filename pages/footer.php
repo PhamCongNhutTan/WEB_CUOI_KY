@@ -5,9 +5,9 @@
             <div class="col-12 col-md-4">
                 <h6>LIÊN HỆ VỚI CHÚNG TÔI</h6>
                 <ul>
-                    <li><a href="" target="_blank"><i class="fa-solid fa-phone"></i> Phone: +84012345</a></li>
-                    <li><a href="" target="_blank"><i class="fa-solid fa-envelope"></i> Email: 52200000@student.tdtu.edu.vn</a></li>
-                    <li><a href="" target="_blank"><i class="fa-solid fa-location-dot"></i> Address: 1234, TP.HCM</a></li>
+                    <li><a><i class="fa-solid fa-phone"></i> Phone: +84012345</a></li>
+                    <li><a><i class="fa-solid fa-envelope"></i> Email: 52200000@student.tdtu.edu.vn</a></li>
+                    <li><a><i class="fa-solid fa-location-dot"></i> Address: 1234, TP.HCM</a></li>
                 </ul>
             </div>
             <div class="col-12 col-md-4">
@@ -22,10 +22,10 @@
             <div class="col-12 col-md-4">
                 <h6>LIÊN KẾT NHANH</h6>
                 <ul>
-                    <li><a href="" target="_blank">Chuyến đi</a></li>
-                    <li><a href="" target="_blank">Tin tức</a></li>
-                    <li><a href="" target="_blank">Liện hệ</a></li>
-                    <li><a href="" target="_blank">Giỏ hàng</a></li>
+                    <li><a href="index.php?quanly=chuyendi">Chuyến đi</a></li>
+                    <li><a href="index.php?quanly=tintuc">Tin tức</a></li>
+                    <li><a href="index.php?quanly=lienhe">Liện hệ</a></li>
+                    <li><a href="index.php?quanly=giohang">Giỏ hàng</a></li>
                 </ul>
             </div>
         </div>
