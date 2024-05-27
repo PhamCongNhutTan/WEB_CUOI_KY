@@ -28,7 +28,7 @@
         if (isset($_SESSION["dangnhap"]) && isset($_SESSION["User_ID"])) {
             $user = new User($_SESSION["User_ID"]);
         }
-        if (isset($_SESSION["role"]) && $_SESSION["role"] != "admin") {
+        if ((isset($_SESSION["role"]) && $_SESSION["role"] != "admin") || !isset($_SESSION["role"]) || !isset($_SESSION["dangnhap"])) {
             header("Location:../");
         }
         include("modules/menu.php");
