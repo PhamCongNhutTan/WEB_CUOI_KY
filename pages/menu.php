@@ -50,7 +50,7 @@
                 <?php
                 if(isset($_GET["dangxuat"])){
                     unset($_SESSION["dangnhap"]);
-                    header("Location:../");
+                    session_destroy();
                 }
                 if (!isset($_SESSION['dangnhap'])) {
                     include("./modules/components/login_button.php");

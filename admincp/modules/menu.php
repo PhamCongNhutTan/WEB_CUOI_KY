@@ -20,7 +20,7 @@
       </div>
       <?php
       if (isset($_GET["dangxuat"])) {
-        session_destroy();
+        unset($_SESSION["dangnhap"]);
         header("Location:../");
       }
       if (isset($_SESSION['dangnhap'])) {
