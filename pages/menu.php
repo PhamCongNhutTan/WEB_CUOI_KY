@@ -19,9 +19,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?quanly=lienhe">Liên hệ</a>
                     </li>
+                    <?php 
+                        if(isset($_SESSION['dangnhap'])){
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?quanly=giohang">Giỏ hàng</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?quanly=taikhoan">Thông tin tài khoản</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?quanly=doimatkhau">Đổi mật khẩu</a>
+                    </li>
+                    <?php
+                    }
+                    ?>
                     <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
