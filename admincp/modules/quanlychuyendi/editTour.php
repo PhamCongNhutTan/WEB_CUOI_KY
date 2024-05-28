@@ -99,7 +99,7 @@ $tour = TourController::getTourByID($tourID);
             }
         });
         preview.addEventListener('click', function() {
-            file.click(); // Click on the file input element
+            fileInput.click(); // Click on the file input element
         });
         const form = document.getElementById("editTourForm");
         form.addEventListener("submit", function(e) {

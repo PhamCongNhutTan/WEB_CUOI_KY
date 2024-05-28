@@ -23,15 +23,15 @@ $birth = $rowi4['Birth'];
                 <div class="row">
                     <div class="col">
                         <div class="form-outline mb-4">
-                            <input type="email" name="email" class="form-control form-control-lg" value="<?php echo $row['Email']; ?>" disabled/>
+                            <input type="email" name="email" class="form-control form-control-lg" value="<?php echo $row['Email']; ?>" disabled />
                             <label class="form-label">Email</label>
                         </div>
                         <div class="form-outline mb-4">
-                            <input name="phone" class="form-control form-control-lg" value="<?php echo $row['Phone']; ?>" disabled/>
+                            <input name="phone" class="form-control form-control-lg" value="<?php echo $row['Phone']; ?>" disabled />
                             <label class="form-label">Số điện thoại</label>
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="text" name="name" class="form-control form-control-lg" value="<?php echo $rowi4['Username'] ? $rowi4['Username'] : ''; ?>" disabled/>
+                            <input type="text" name="name" class="form-control form-control-lg" value="<?php echo $rowi4['Username'] ? $rowi4['Username'] : ''; ?>" disabled />
                             <label class="form-label">Họ tên</label>
                         </div>
                         <div class="pt-1 mb-4">
@@ -52,11 +52,11 @@ $birth = $rowi4['Birth'];
                             <label class="form-label">Ngày sinh: Năm-Tháng-Ngày</label>
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="file" name="hinhanh" class="form-control form-control-lg" value="<?php echo $row['ImagePath']; ?>" disabled/>
+                            <input id="imagePath" type="file" name="hinhanh" class="form-control form-control-lg" value="<?php echo $row['ImagePath']; ?>" disabled />
                             <label class="form-label">Ảnh đại diện</label>
                         </div>
                         <div class="avt">
-                            <img src="pages/main_content/avatar.jpg" class="rounded-circle" style="width: 180px;" alt="" />
+                            <img id="preview" src="<?php echo './images/avatar/' . $row["User_ID"] . '/' . $row["ImagePath"] ?>" class="rounded-circle" style="width: 180px;" alt="" />
                         </div>
                     </div>
                 </div>
@@ -66,6 +66,22 @@ $birth = $rowi4['Birth'];
 </section>
 
 <script>
+    const fileInput = document.getElementById("imagePath");
+    const preview = document.getElementById("preview");
+    fileInput.addEventListener("change", function() {
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result; // Display the selected image
+            }
+            reader.readAsDataURL(file); // Convert the file to a data URL
+        }
+    });
+    preview.addEventListener('click', function() {
+        fileInput.click(); // Click on the file input element
+    });
+
     function enableFields() {
         // Enable all the input fields and select elements
         var inputs = document.querySelectorAll('input, select');
@@ -78,5 +94,3 @@ $birth = $rowi4['Birth'];
         document.getElementById('editButton').style.display = 'none';
     }
 </script>
-
-

@@ -48,7 +48,11 @@ include("../config/config.php");
         $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
 
         if (!empty($_FILES['hinhanh']['name'])){
-            move_uploaded_file($hinhanh_tmp,'avatar/'.$hinhanh);
+            $path = '../images/avatar/'.$userID.'/';
+            if(!file_exists($path)){
+                mkdir($path, 0777, true);
+            }
+            move_uploaded_file($hinhanh_tmp, $path.$hinhanh);
 
             $sql_update = "UPDATE User SET 
             Email='".$email."',ImagePath='".$hinhanh."',Phone='".$phone."' 
