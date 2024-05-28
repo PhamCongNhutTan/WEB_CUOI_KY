@@ -1,4 +1,5 @@
-<button  type="submit" value="1" name="dangxuat" class="btn btn-dark border-0 mx-3" style="background-color:inherit; font-size:22px; border-radius:3rem;">Đăng ký</button>
+<button onclick="location.href='index.php?quanly=dangky';" name="dangky" class="btn btn-dark border-0 mx-3" style="background-color:inherit; font-size:22px; border-radius:3rem;">Đăng ký</button>
+
 <button type="button" class="btn btn-dark border-0" data-bs-toggle="modal" style="background-color:inherit; font-size:22px; border-radius:3rem;" data-bs-target="#ModalForm">Đăng nhập</button>
 <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">

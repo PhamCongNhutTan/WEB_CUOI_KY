@@ -17,6 +17,12 @@
             include('main_content/chitiettintuc.php');
         } else if ($temp == 'giohang') {
             include('main_content/giohang.php');
+        } else if ($temp == 'dangky') {
+            include('main_content/dangky.php');
+        } else if ($temp == 'taikhoan') {
+            include('main_content/taikhoan.php');
+        } else if ($temp == 'doimatkhau') {
+            include('main_content/doimatkhau.php');
         } else {
             include('main_content/trangchu.php');
         }
