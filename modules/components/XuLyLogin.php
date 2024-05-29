@@ -2,7 +2,7 @@
 include("../../config/config.php");
 session_start();
 
-header('Content-Type: application/json');
+// header('Content-Type: application/json');
 
 $emailOrPhone = $_POST['emailOrPhone'] ?? '';
 $password = $_POST['password'] ?? '';
@@ -28,7 +28,7 @@ if ($count >= 1) {
     $response['success'] = true;
     $response['message'] = 'Login successful';
 } else {
-    $response['message'] = 'Invalid email or password';
+    $response['message'] = 'Sai Email/SDT hoặc mật khẩu';
 }
 
 echo json_encode($response);

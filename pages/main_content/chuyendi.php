@@ -1,3 +1,4 @@
+
 <div id="notification" style="width: 300px; position: fixed; top: 100px; right: 10px;" class="mt-3 d-none text-center alert alert-success alert-dismissible" role="alert">Thêm chuyến đi thành công</div>
 <div class="container" id="chuyendi">
     <?php
@@ -14,9 +15,18 @@
                             <a href="">
                                 <h4>' . $tour->getName() . '</h4>
                             </a>
-                            <h7 style="display: block;" >' . $tour->getLocation() . '</h7>
-                            <p>' . $tour->getDescription() . '</p>
-                            <form class="d-flex" id="addCartForm" method="POST"' . '">
+                            <h7 style="display: block;" ><i style="color: gray;" class="bi bi-geo-alt-fill"> </i>' . $tour->getLocation() . '</h7>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <p class="two-line-text">' . $tour->getDescription() . '</p>
+                            <form class="" action="./?quanly=chitietchuyendi&tourid=' . $tour->getTourID() . '" method="POST"' . '">
+                              <input class="d-none" name="tourid" type="text" value="' . $tour->getTourID() . '"> 
+                              <button style="text-wrap: nowrap;" type="submit" name="WaddCart" class="btn-by-tour">Chi tiết</button>
+                            </form>
+                            <form class="d-flex" id="addCartForm" method="POST">
                               <input class="d-none" name="tourid" type="text" value="' . $tour->getTourID() . '"> 
                               <button style="text-wrap: nowrap;" type="submit" name="addCart" class="btn-by-tour">Thêm vào giỏ hàng</button>
                               <input style="width: 13%;"class="ms-3 form-control p-0 m-0 ps-4" type="number" name="amount" id="amount" value="1" min="1">    

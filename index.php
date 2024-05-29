@@ -39,10 +39,11 @@
         if (isset($_SESSION["dangnhap"]) && isset($_SESSION["User_ID"])) {
             $user = new User($_SESSION["User_ID"]);
         }
-        include ("pages/menu.php");
-        include ("pages/header.php");
-        include ("pages/main.php");
-        include ("pages/footer.php");
+        include("pages/menu.php");
+        if($_GET["quanly"] != "chitietchuyendi")
+            include("pages/header.php");
+        include("pages/main.php");
+        include("pages/footer.php");
         ?>
     </div>
 

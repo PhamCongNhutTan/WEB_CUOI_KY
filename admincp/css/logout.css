@@ -26,7 +26,7 @@ button a#admin {
   color: white;
 }
 
-button a#admin:hover {
+button:hover a#admin {
   color: #000000;
 
 }

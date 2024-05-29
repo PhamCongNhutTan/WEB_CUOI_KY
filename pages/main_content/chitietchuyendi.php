@@ -2,10 +2,10 @@
     class="mt-3 d-none text-center alert alert-success alert-dismissible" role="alert">Thêm chuyến đi thành công</div>
 <div class="container" id="chuyendi">
     <?php
-    $tourController = new TourController();
-    $tourList = $tourController->getTours();
-    foreach ($tourList as $tour) {
-        echo '<div class="row my-5" style="cursor: pointer; user-select: none;">
+    if (isset($_GET["tourid"])) {
+        $tour = TourController::getTourByID(($_GET["tourid"]));
+    }
+    echo '<div class="row my-5" style="cursor: pointer; user-select: none;">
                     <div class="col-12 col-md-6">
                         <img class="tour-image" src="./images/tour/' . $tour->getTourID() . '/' . $tour->getImagePath() . '">
                     </div>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>';
-    }
+
     ?>
 </div>
 <script>

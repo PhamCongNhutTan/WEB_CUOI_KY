@@ -97,7 +97,7 @@ button a#admin {
 
 
 
-button a#admin:hover, button#admin:hover {
+button:hover a#admin, button#admin:hover {
   color: #000000;
   transition: 0.25s;
 }
