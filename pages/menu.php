@@ -62,7 +62,7 @@
                 <?php
                 if(isset($_GET["dangxuat"])){
                     unset($_SESSION["dangnhap"]);
-                    session_destroy();
+                    unset($_SESSION["role"]);
                 }
                 if (!isset($_SESSION['dangnhap'])) {
                     include("./modules/components/login_button.php");

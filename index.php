@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/chuyendi.css" type="text/css">
+    <link rel="stylesheet" href="css/modalLogin.css">
+    <link rel="stylesheet" href="css/chitietchuyendi.css" type="text/css">
     <link rel="stylesheet" href="css/lienhe.css" type="text/css">
     <link rel="stylesheet" href="css/tintuc.css" type="text/css">
     <link rel="stylesheet" href="css/bar.css" type="text/css">
-    <link rel="stylesheet" href="css/modalLogin.css">
+    <link rel="stylesheet" href="css/numeric.css" type="text/css">
+    <link rel="stylesheet" href="css/giohang.css" type="text/css">
+    <link rel="stylesheet" href="./admincp/css/alert.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 </head>
 
 <body style="min-height: 100vh;">

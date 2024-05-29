@@ -60,6 +60,7 @@ class TourController
         }
         // Thêm Tour
         $detail = str_replace("'", '"', $detail);
+        $description = str_replace("'", '"', $description);
         $query = "INSERT INTO Tour(Name, Location, BasePrice, ImagePath, Type, Description, Detail) VALUES ('" . $name . "', '" . $location . "', '" . $basePrice . "', '" . $imagePath . "', '" . $type . "', '" . $description . "', '" . $detail . "')";
         $result = mysqli_query($mysqli, $query);
         $move = move_uploaded_file($temp_imagePath, $tourImagesPath . "/" . $imagePath);
@@ -69,6 +70,7 @@ class TourController
     {
         global $mysqli;
         $detail = str_replace("'", '"', $detail);
+        $description = str_replace("'", '"', $description);
         $query = "UPDATE Tour SET Name='" . $name . "', Location='" . $location . "', Description='" . $description . "', BasePrice='" . $basePrice . "', ImagePath='" . $imagePath . "', Type='" . $type . "', Detail='" . $detail . "' WHERE Tour_ID = " . $tourID;
         if ($temp_imagePath == "") {
             $query = "UPDATE Tour SET Name='" . $name . "', Location='" . $location . "', Description='" . $description . "', BasePrice='" . $basePrice . "', Type='" . $type . "', Detail='" . $detail . "' WHERE Tour_ID = " . $tourID;

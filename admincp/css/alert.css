@@ -1,4 +1,4 @@
-.alert{
+.alert {
     background: white;
     min-width: 370px;
     position: fixed;
@@ -10,59 +10,73 @@
     opacity: 0;
     pointer-events: none;
     z-index: 1;
-  }
-  .alert.showAlert{
+}
+
+.alert.showAlert {
     opacity: 1;
     pointer-events: auto;
-  }
-  .alert.show{
+}
+
+.alert.show {
     animation: show_slide 0.8s ease forwards;
-  }
-  @keyframes show_slide {
-    0%{
-      transform: translateX(100%);
+}
+
+@keyframes show_slide {
+    0% {
+        transform: translateX(100%);
     }
-    40%{
-      transform: translateX(-10%);
+
+    40% {
+        transform: translateX(-10%);
     }
-    80%{
-      transform: translateX(0%);
+
+    80% {
+        transform: translateX(0%);
     }
-    100%{
-      transform: translateX(-10px);
+
+    100% {
+        transform: translateX(-10px);
     }
-  }
-  .alert.hide{
+}
+
+.alert.hide {
     animation: hide_slide 0.8s ease forwards;
-  }
-  @keyframes hide_slide {
-    0%{
-      transform: translateX(-10px);
+}
+
+@keyframes hide_slide {
+    0% {
+        transform: translateX(-10px);
     }
-    40%{
-      transform: translateX(0%);
+
+    40% {
+        transform: translateX(0%);
     }
-    80%{
-      transform: translateX(-10%);
+
+    80% {
+        transform: translateX(-10%);
     }
-    100%{
-      transform: translateX(100%);
+
+    100% {
+        transform: translateX(110%);
     }
-  }
-  .alert .fa-exclamation-circle{
+}
+
+.alert .fa-exclamation-circle {
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
     color: #198754;
     font-size: 30px;
-  }
-  .alert .msg{
+}
+
+.alert .msg {
     padding: 0 20px;
     font-size: 18px;
     color: #198754;
-  }
-  .alert .close-btn{
+}
+
+.alert .close-btn {
     position: absolute;
     right: 0px;
     top: 50%;
@@ -70,12 +84,14 @@
     background: #ffffff;
     padding: 20px 18px;
     cursor: pointer;
-  }
-  .alert .close-btn:hover{
+}
+
+.alert .close-btn:hover {
     background: #e9e9e9;
-  }
-  .alert .close-btn .fas{
+}
+
+.alert .close-btn .fas {
     color: #b8b8b8;
     font-size: 22px;
     line-height: 40px;
-  }
+}

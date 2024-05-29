@@ -1,0 +1,27 @@
+.numeric, .numeric:read-only{
+    background-color: #ffffff;
+    color: #202030;
+    border-bottom: 1px solid black;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+button{
+    color: #5f5f5f;
+    background-color: #ffffff;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    display: contents;
+}
+#decrement{
+    margin-left: 1rem;
+    border-radius: 45px 0 0 45px;
+}
+#increment{
+   
+    border-radius: 0 45px 45px 0;
+}

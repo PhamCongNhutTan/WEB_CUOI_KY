@@ -1,6 +1,6 @@
 <!-- HEADER -->
 <?php
-if ((isset($_GET["quanly"]) && $_GET["quanly"] != "chitietchuyendi") || !isset($_GET["quanly"])) {
+if ((isset($_GET["quanly"]) && ($_GET["quanly"] != "chitietchuyendi" && $_GET["quanly"] != "giohang")) || !isset($_GET["quanly"])) {
 ?>
     <div id="header">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
