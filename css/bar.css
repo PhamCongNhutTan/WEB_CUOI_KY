@@ -18,4 +18,5 @@
     vertical-align: middle;
     /* Align the column with the text */
     position: absolute;
+    border-radius: 30rem!important;
 }

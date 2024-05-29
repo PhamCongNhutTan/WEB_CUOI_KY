@@ -21,7 +21,7 @@ class TourController
                 $tour->setImagePath($row["ImagePath"]);
                 $tour->setType($row["Type"]);
                 $tour->setDescription($row["Description"]);
-
+                $tour->setDetail($row["Detail"]);
                 $tours[] = $tour;
             }
         }
@@ -42,10 +42,10 @@ class TourController
         $tour->setImagePath($row["ImagePath"]);
         $tour->setType($row["Type"]);
         $tour->setDescription($row["Description"]);
-        
+        $tour->setDetail($row["Detail"]);
         return $tour;
     }
-    public static function addTour($name, $location, $description, $basePrice, $imagePath, $temp_imagePath)
+    public static function addTour($name, $location, $description, $basePrice, $imagePath, $temp_imagePath, $detail)
     {
         global $mysqli;
         $type = "Đang mở";
@@ -58,27 +58,30 @@ class TourController
             mkdir($tourImagesPath, 0777, true);
         }
         // Thêm Tour
-        $query = "INSERT INTO Tour(Name, Location, BasePrice, ImagePath, Type, Description) VALUES ('" . $name . "', '" . $location . "', '" . $basePrice . "', '" . $imagePath . "', '" . $type . "', '" . $description . "')";
+        $detail = str_replace("'", '"', $detail);
+        $query = "INSERT INTO Tour(Name, Location, BasePrice, ImagePath, Type, Description, Detail) VALUES ('" . $name . "', '" . $location . "', '" . $basePrice . "', '" . $imagePath . "', '" . $type . "', '" . $description . "', '" . $detail . "')";
         $result = mysqli_query($mysqli, $query);
         $move = move_uploaded_file($temp_imagePath, $tourImagesPath . "/" . $imagePath);
         return $result && $move;
     }
-    public static function editTour($tourID, $name, $location, $description, $type, $basePrice, $imagePath, $temp_imagePath){
+    public static function editTour($tourID, $name, $location, $description, $type, $basePrice, $imagePath, $temp_imagePath, $detail)
+    {
         global $mysqli;
-        $query = "UPDATE Tour SET Name='".$name."', Location='".$location."', Description='".$description."', BasePrice='".$basePrice."', ImagePath='".$imagePath."', Type='".$type."' WHERE Tour_ID = ".$tourID;
-        if($temp_imagePath == ""){
-            $query = "UPDATE Tour SET Name='".$name."', Location='".$location."', Description='".$description."', BasePrice='".$basePrice."', Type='".$type."' WHERE Tour_ID = ".$tourID;
+        $detail = str_replace("'", '"', $detail);
+        $query = "UPDATE Tour SET Name='" . $name . "', Location='" . $location . "', Description='" . $description . "', BasePrice='" . $basePrice . "', ImagePath='" . $imagePath . "', Type='" . $type . "', Detail='" . $detail . "' WHERE Tour_ID = " . $tourID;
+        if ($temp_imagePath == "") {
+            $query = "UPDATE Tour SET Name='" . $name . "', Location='" . $location . "', Description='" . $description . "', BasePrice='" . $basePrice . "', Type='" . $type . "', Detail='" . $detail . "' WHERE Tour_ID = " . $tourID;
         }
         $result = mysqli_query($mysqli, $query);
-        $path = "../../../images/tour/".$tourID."/".$imagePath;
+        $path = "../../../images/tour/" . $tourID . "/" . $imagePath;
         $move = true;
-        if($temp_imagePath != ""){
-            if(file_exists($path)){
+        if ($temp_imagePath != "") {
+            if (file_exists($path)) {
                 unlink($path);
             }
-            $move = move_uploaded_file($temp_imagePath,$path);
+            $move = move_uploaded_file($temp_imagePath, $path);
         }
-        
+
         return $result && $move;
     }
 }

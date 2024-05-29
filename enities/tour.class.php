@@ -7,7 +7,7 @@
         private $imagePath;
         private $type;
         private $description;
-        
+        private $detail;
 
         /**
          * Get the value of tourID
@@ -145,6 +145,26 @@
         public function setDescription($description)
         {
                 $this->description = $description;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of detail
+         */ 
+        public function getDetail()
+        {
+                return $this->detail;
+        }
+
+        /**
+         * Set the value of detail
+         *
+         * @return  self
+         */ 
+        public function setDetail($detail)
+        {
+                $this->detail = $detail;
 
                 return $this;
         }

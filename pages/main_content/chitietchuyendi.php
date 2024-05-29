@@ -14,9 +14,13 @@
                             <a href="">
                                 <h4>' . $tour->getName() . '</h4>
                             </a>
-                            <h7 style="display: block;" >' . $tour->getLocation() . '</h7>
-                            
-                            <p>' . $tour->getDescription() . '</p>
+                            <h7 style="display: block;" ><i style="color: gray;" class="bi bi-geo-alt-fill"> </i>' . $tour->getLocation() . '</h7>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <p class="two-line-text">' . $tour->getDescription() . '</p>
                             <form class="d-flex" id="addCartForm" method="POST"' . '">
                               <input class="d-none" name="tourid" type="text" value="' . $tour->getTourID() . '"> 
                               <button style="text-wrap: nowrap;" type="submit" name="addCart" class="btn-by-tour">Thêm vào giỏ hàng</button>

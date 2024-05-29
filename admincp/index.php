@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/logout.css">
     <link rel="stylesheet" href="./css/viewTour.css">
     <link rel="stylesheet" href="./css/addTour.css">
+    <link rel="stylesheet" href="./css/alert.css">
     <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -48,6 +49,7 @@
     include("modules/footer.php");
     ?>
     <script>
+        
         ClassicEditor
             .create(document.querySelector('#tomtat'))
             .then(editor => {
@@ -65,13 +67,15 @@
                 console.error(error);
             });
         ClassicEditor
-            .create(document.querySelector('#description'))
+            .create(document.querySelector('#detail'))
             .then(editor => {
                 console.log(editor);
             })
             .catch(error => {
                 console.error(error);
             });
+
+        
     </script>
 </body>
 

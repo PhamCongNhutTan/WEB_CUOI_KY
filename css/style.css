@@ -162,3 +162,12 @@ footer {
     color: white;
     padding: 20px;
 }
+.two-line-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 3em; /* This value depends on the line-height property */
+    line-height: 1.5em; /* Line height should be set to ensure the height is correctly calculated */
+}
