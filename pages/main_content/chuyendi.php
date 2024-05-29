@@ -5,6 +5,11 @@
     $tourController = new TourController();
     $tourList = $tourController->getTours();
     foreach ($tourList as $tour) {
+        $tour_id = $tour->getTourID();
+        $sql_avg_star = "SELECT AVG(Rate) AS Avg_Rate FROM review WHERE Tour_ID = '$tour_id' && Type = 'chitietchuyendi'";
+        $query_avg_star = mysqli_query($mysqli, $sql_avg_star);
+        $result_avg_star = mysqli_fetch_assoc($query_avg_star);
+        $avg_star = round($result_avg_star["Avg_Rate"], 1);
         echo '<div class="row my-5" style="cursor: pointer; user-select: none;">
                     <div class="col-12 col-md-6">
                         <img class="tour-image" src="./images/tour/' . $tour->getTourID() . '/' . $tour->getImagePath() . '">
@@ -16,11 +21,7 @@
                                 <h4>' . $tour->getName() . '</h4>
                             </a>
                             <h7 style="display: block;" ><i style="color: gray;" class="bi bi-geo-alt-fill"> </i>' . $tour->getLocation() . '</h7>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <p>' . $avg_star . ' <i class="fa-solid fa-star"></i></p>
                             <p class="two-line-text">' . $tour->getDescription() . '</p>
                             <form class="" action="./?quanly=chitietchuyendi&tourid=' . $tour->getTourID() . '" method="POST"' . '">
                               <input class="d-none" name="tourid" type="text" value="' . $tour->getTourID() . '"> 
