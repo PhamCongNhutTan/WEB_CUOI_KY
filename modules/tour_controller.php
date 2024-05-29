@@ -6,7 +6,6 @@ class TourController
         global $mysqli;
         $tours = array(); // Store retrieved tours here
 
-
         $query = "SELECT * FROM Tour";
         $result = $mysqli->query($query);
 

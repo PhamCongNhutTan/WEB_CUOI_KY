@@ -21,3 +21,8 @@ $row_post_title = mysqli_fetch_array($query);
     }
     ?>
 </div>
+
+<!--Binh luan danh gia-->
+<?php
+include("binhluan.php");
+?>
