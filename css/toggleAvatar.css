@@ -1,0 +1,46 @@
+.my-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    background-color: whitesmoke;
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px solid gainsboro;
+}
+
+.btn-container {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.btn-container:hover {
+    background-color: gainsboro;
+}
+
+.my-dropdown-menu a {
+    color: gray !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+}
+
+.my-dropdown-menu i {
+    margin-right: 20px;
+}
+
+.btn-avatar-toggle {
+    margin-left: 10px;
+    display: block;
+    background-color:inherit;
+    font-size: 18px;
+    border: none;
+}
+
+.breaker {
+    height: 1px;
+    background-color: gainsboro;
+    margin: 0px 25px;
+}
