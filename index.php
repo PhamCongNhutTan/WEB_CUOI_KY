@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="css/modalLogin.css">
 </head>
 
-<body>
-    <div id="wrapper">
+<body style="min-height: 100vh;">
+    <div id="wrapper" style="min-height: inherit;">
         <?php
         session_start();
         include("./config/config.php");
@@ -31,13 +31,12 @@
             $user = new User($_SESSION["User_ID"]);
         }
         include("pages/menu.php");
-        if($_GET["quanly"] != "chitietchuyendi")
-            include("pages/header.php");
+        include("pages/header.php");
         include("pages/main.php");
-        include("pages/footer.php");
+
         ?>
     </div>
-
+    <?php include("pages/footer.php"); ?>
     <footer>
         Copyright &copy; 2024 by HKT TEAM
     </footer>
