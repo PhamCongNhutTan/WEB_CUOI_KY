@@ -26,6 +26,9 @@
                 case "edit": include("modules/quanlychuyendi/editTour.php"); break;
             }
         }
+        if($temp == "quanlybinhluan"){
+            include("modules/quanlybinhluan/review_list.php");
+        }
         if ($temp == '') {
             include("modules/quanlychuyendi/viewTour.php");
         }

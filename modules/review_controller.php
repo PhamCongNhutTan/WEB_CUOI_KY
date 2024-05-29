@@ -39,5 +39,25 @@ class ReviewController
         $userName = $row["Username"];
         return $userName;
     }
+
+    public static function getTourNameByTourID($tour_id) {
+        global $mysqli;
+
+        $query = "SELECT Name FROM `tour` WHERE Tour_ID = " . $tour_id;
+        $result = $mysqli->query($query);
+        $row = mysqli_fetch_assoc($result);
+        $name = $row["Name"];
+        return $name;
+    }
+
+    public static function getPostTitleByPostID($post_id) {
+        global $mysqli;
+
+        $query = "SELECT tieude FROM `post` WHERE post_id = " . $post_id;
+        $result = $mysqli->query($query);
+        $row = mysqli_fetch_assoc($result);
+        $title = $row["tieude"];
+        return $title;
+    }
 }
 ?>

@@ -15,7 +15,6 @@
                                 <h4>' . $tour->getName() . '</h4>
                             </a>
                             <h7 style="display: block;" >' . $tour->getLocation() . '</h7>
-                            
                             <p>' . $tour->getDescription() . '</p>
                             <form class="d-flex" id="addCartForm" method="POST"' . '">
                               <input class="d-none" name="tourid" type="text" value="' . $tour->getTourID() . '"> 
