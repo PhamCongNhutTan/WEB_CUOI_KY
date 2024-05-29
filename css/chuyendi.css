@@ -59,6 +59,8 @@ a.btn-by-tour:hover, a.btn-by-tour:active{
 
 .btn-by-tour:hover {
     border-radius: 0;
+    color: white;
+    transition: 0.2s;
     scale: 1;
 }
 

@@ -1,3 +1,8 @@
+<?php 
+    if(!isset($_SESSION["User_ID"])){
+        include("./pages/main_content/trangchu.php");
+    }
+?>
 <div class="container my-3">
     <h3 class="mt-3"><span class="bar"></span>Giỏ hàng</h3>
     <table id="tour" class="table table-striped my-3 text-center">
