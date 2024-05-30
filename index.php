@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +13,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/chuyendi.css" type="text/css">
+    <link rel="stylesheet" href="css/modalLogin.css">
+    <link rel="stylesheet" href="css/chitietchuyendi.css" type="text/css">
     <link rel="stylesheet" href="css/lienhe.css" type="text/css">
     <link rel="stylesheet" href="css/tintuc.css" type="text/css">
     <link rel="stylesheet" href="css/bar.css" type="text/css">
@@ -23,10 +24,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/numeric.css" type="text/css">
+    <link rel="stylesheet" href="css/giohang.css" type="text/css">
+    <link rel="stylesheet" href="./admincp/css/alert.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 </head>
 
-<body>
-    <div id="wrapper">
+<body style="min-height: 100vh;">
+    <div id="wrapper" style="min-height: inherit;">
         <?php
         session_start();
         include ("./config/config.php");
@@ -39,13 +45,12 @@
             $user = new User($_SESSION["User_ID"]);
         }
         include("pages/menu.php");
-        if($_GET["quanly"] != "chitietchuyendi")
-            include("pages/header.php");
+        include("pages/header.php");
         include("pages/main.php");
-        include("pages/footer.php");
+
         ?>
     </div>
-
+    <?php include("pages/footer.php"); ?>
     <footer>
         Copyright &copy; 2024 by HKT TEAM
     </footer>

@@ -22,7 +22,7 @@
             switch($query){
                 case '': header("Location:./"); break;
                 case "view": include("modules/quanlychuyendi/viewTour.php"); break;
-                case "add": include("modules/quanlychuyendi/addTour.php"); break;
+                case "aadd": include("modules/quanlychuyendi/addTour.php"); break;
                 case "edit": include("modules/quanlychuyendi/editTour.php"); break;
             }
         }
@@ -31,6 +31,9 @@
         }
         if ($temp == '') {
             include("modules/quanlychuyendi/viewTour.php");
+        }
+        if($temp =="quanlyvedat"){
+            include("modules/quanlyvedat/viewBook.php");
         }
     ?>
 </div>

@@ -23,33 +23,36 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 </head>
 
-<body>
-    <?php
-    session_start();
-    include("config/config.php");
-    include("../enities/user.class.php");
-    include("../enities/tour.class.php");
-    include("../modules/tour_controller.php");
-    if (isset($_SESSION["dangnhap"]) && isset($_SESSION["User_ID"])) {
-        $user = new User($_SESSION["User_ID"]);
-    }
-    if (isset($_SESSION["role"]) && $_SESSION["role"] != "admin") {
-        header("Location:../");
-    }
-    include("modules/menu.php");
-    ?>
-    <h2 class="text-center">WELCOME TO ADMIN</h2>
-    <div class="container">
+<body style="min-height: 100vh;">
+    <div class="wrapper" style="min-height:inherit;">
+
+
         <?php
-        include("modules/header.php");
-        include("modules/main.php");
+        session_start();
+        include("config/config.php");
+        include("../enities/user.class.php");
+        include("../enities/tour.class.php");
+        include("../modules/tour_controller.php");
+        if (isset($_SESSION["dangnhap"]) && isset($_SESSION["User_ID"])) {
+            $user = new User($_SESSION["User_ID"]);
+        }
+        if (isset($_SESSION["role"]) && $_SESSION["role"] != "admin") {
+            header("Location:../");
+        }
+        include("modules/menu.php");
         ?>
+        <h2 class="text-center">WELCOME TO ADMIN</h2>
+        <div class="container">
+            <?php
+            include("modules/header.php");
+            include("modules/main.php");
+            ?>
+        </div>
     </div>
     <?php
     include("modules/footer.php");
     ?>
     <script>
-        
         ClassicEditor
             .create(document.querySelector('#tomtat'))
             .then(editor => {
@@ -74,8 +77,6 @@
             .catch(error => {
                 console.error(error);
             });
-
-        
     </script>
 </body>
 
