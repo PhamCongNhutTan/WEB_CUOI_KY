@@ -22,10 +22,11 @@
             switch($query){
                 case '': header("Location:./"); break;
                 case "view": include("modules/quanlychuyendi/viewTour.php"); break;
-                case "aadd": include("modules/quanlychuyendi/addTour.php"); break;
+                case "add": include("modules/quanlychuyendi/addTour.php"); break;
                 case "edit": include("modules/quanlychuyendi/editTour.php"); break;
             }
         }
+<<<<<<< HEAD
         if($temp == "quanlybinhluan"){
             include("modules/quanlybinhluan/review_list.php");
         }
@@ -35,5 +36,7 @@
         if($temp =="quanlyvedat"){
             include("modules/quanlyvedat/viewBook.php");
         }
+=======
+>>>>>>> parent of aab4c2b (feat: thanh toán, chi tiết chuyến đi, giỏ hàng full)
     ?>
 </div>

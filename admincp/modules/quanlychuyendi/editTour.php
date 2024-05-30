@@ -9,7 +9,6 @@ $tour = TourController::getTourByID($tourID);
             <span class="fas fa-times"></span>
          </div>
     </div>
-    <h6 style="text-align: left;">Quản lý chuyến đi > Cập nhật</h5>
     <h3 style="text-align: left;" class="mt-3 "><span class="bar"></span>Cập nhật chuyến đi</h3>
     <form id="editTourForm" method="POST" action="modules/quanlychuyendi/execute.php" enctype="multipart/form-data">
         <input type="text" class="d-none" name="tourID" value="<?php echo $tourID ?>">

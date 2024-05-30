@@ -14,12 +14,15 @@
             <a class="nav-link" href="index.php?action=quanlytintuc&query=them">Quản lý tin tức</a>
           </li>
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="index.php?action=quanlybinhluan&query=xem">Quản lý bình luận</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php?action=quanlyvedat&query=view">Quản lý vé đặt</a>
           </li>
           <li class="nav-item">
+=======
+>>>>>>> parent of aab4c2b (feat: thanh toán, chi tiết chuyến đi, giỏ hàng full)
             <a class="nav-link" href="index.php?action=thongtinlienhe&query=xem">Thông tin liên hệ</a>
           </li>
         </ul>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="notification" style="width: 300px; position: fixed; top: 100px; right: 10px;"
     class="mt-3 d-none text-center alert alert-success alert-dismissible" role="alert">Thêm chuyến đi thành công</div>
 <div class="container" id="chuyendi">
@@ -8,11 +9,15 @@
             <span style="color: #696969!important;" class="fas fa-times"></span>
         </div>
     </div>
+=======
+<div id="notification" style="width: 300px; position: fixed; top: 100px; right: 10px;" class="mt-3 d-none text-center alert alert-success alert-dismissible" role="alert">Thêm chuyến đi thành công</div>
+<div class="container" id="chuyendi">
+>>>>>>> parent of aab4c2b (feat: thanh toán, chi tiết chuyến đi, giỏ hàng full)
     <?php
     if (isset($_GET["tourid"])) {
         $tour = TourController::getTourByID(($_GET["tourid"]));
-        $tour->setBasePrice(number_format($tour->getBasePrice(), 0, '', ','));
     }
+<<<<<<< HEAD
     $tour_id = $tour->getTourID();
     $sql_avg_star = "SELECT AVG(Rate) AS Avg_Rate FROM review WHERE Tour_ID = '$tour_id' && Type = 'chitietchuyendi'";
     $query_avg_star = mysqli_query($mysqli, $sql_avg_star);
@@ -80,105 +85,65 @@
                     <div class="row border-0">
                         <button type="submit" name="addCart" class="btn btn-buy col-12 col-lg-7">Thêm vào giỏ hàng</button>
                         <button type="button" name="buyCart" class="btn btn-buy col-12 col-lg-4" onclick="handlePayment()">Đặt ngay</button>
+=======
+    echo '<div class="row my-5" style="cursor: pointer; user-select: none;">
+                    <div class="col-12 col-md-6">
+                        <img class="tour-image" src="./images/tour/' . $tour->getTourID() . '/' . $tour->getImagePath() . '">
+>>>>>>> parent of aab4c2b (feat: thanh toán, chi tiết chuyến đi, giỏ hàng full)
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="price">' . $tour->getBasePrice() . ' VND</p>
+                        <div class="tour-content">
+                            <a href="">
+                                <h4>' . $tour->getName() . '</h4>
+                            </a>
+                            <h7 style="display: block;" ><i style="color: gray;" class="bi bi-geo-alt-fill"> </i>' . $tour->getLocation() . '</h7>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <p class="two-line-text">' . $tour->getDescription() . '</p>
+                            <form class="d-flex" id="addCartForm" method="POST"' . '">
+                              <input class="d-none" name="tourid" type="text" value="' . $tour->getTourID() . '"> 
+                              <button style="text-wrap: nowrap;" type="submit" name="addCart" class="btn-by-tour">Thêm vào giỏ hàng</button>
+                              <input style="width: 13%;"class="ms-3 form-control p-0 m-0 ps-4" type="number" name="amount" id="amount" value="1" min="1">    
+                            </form>
+                        </div>
+                    </div>
+                </div>';
+
+    ?>
 </div>
 <script>
-    const myInput = document.getElementById("amount");
-    const dateInput = document.getElementById('date');
-    var today = new Date();
-    var tomorrow = new Date();
-    tomorrow.setDate(today.getDate() + 1);
-
-    var day = ("0" + tomorrow.getDate()).slice(-2);
-    var month = ("0" + (tomorrow.getMonth() + 1)).slice(-2);
-    var year = tomorrow.getFullYear();
-
-    var minDate = year + "-" + month + "-" + day;
-    dateInput.min = minDate;
-
-    function alertSuccess() {
-        $('.alert').addClass("show");
-        $('.alert').removeClass("hide");
-        $('.alert').addClass("showAlert");
-        setTimeout(function() {
-            $('.alert').removeClass("show");
-            $('.alert').addClass("hide");
-        }, 3000);
-    }
-    $('.close-btn').click(function() {
-        $('.alert').removeClass("show");
-        $('.alert').addClass("hide");
-    });
-
-    function stepper(btn) {
-        let id = btn.getAttribute("id");
-        let min = myInput.getAttribute("min");
-        let max = myInput.getAttribute("max");
-        let step = myInput.getAttribute("step");
-        let val = myInput.getAttribute("value");
-        let calcStep = (id == "increment") ? (step * 1) : (step * -1);
-        let newValue = parseInt(val) + calcStep;
-
-        if (newValue >= min && newValue <= max) {
-            myInput.setAttribute("value", newValue);
-        }
-    }
-
-    function handlePayment() {
-        var selectedItems = [];
-
-        var addForm = document.querySelector("#addCartForm");
-        var tourID = addForm.querySelector("#tourid").value;
-        var amount = parseInt(addForm.querySelector("#amount").value);
-        var date = addForm.querySelector("#date").value;
-        selectedItems.push({tourID, amount, date});
-        console.log(selectedItems);
-        var form = document.createElement("form");
-        form.method = "POST";
-        form.action = "./pages/thanhtoan.php"
-
-        var items = document.createElement("input");
-        items.type = "hidden";
-        items.name = "items";
-        items.value = JSON.stringify(selectedItems);
-        form.appendChild(items);
-        form.classList.add("payment");
-        document.body.appendChild(form);
-        payment = document.querySelector(".payment");
-        payment.submit();
-
-    }
     document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("addCartForm");
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            if (!dateInput.value) {
-                return;
-            }
+        const forms = document.querySelectorAll("#addCartForm");
+        forms.forEach(function(form) {
+            form.addEventListener("submit", function(e) {
+                e.preventDefault(); // Prevent default form submission
 
-            // Prevent default form submission
-            var formData = new FormData(this);
-            formData.append("addCart", "true");
+                var formData = new FormData(this);
+                formData.append("addCart", "true");
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "./modules/cart.php", true);
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    alertSuccess();
-                    // Hide notification after 3 seconds
-                } else {
-                    // Error handling
-                    console.error(xhr.responseText);
-                }
-            };
-            xhr.onerror = function() {
-                console.error("Request failed");
-            };
-            xhr.send(formData);
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "./modules/cart.php", true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        document.getElementById("notification").classList.remove("d-none");
+                        form.reset();
+                        setTimeout(function() {
+                            document.getElementById("notification").classList.add("d-none");
+                        }, 3000); // Hide notification after 3 seconds
+                    } else {
+                        // Error handling
+                        console.error(xhr.responseText);
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error("Request failed");
+                };
+                xhr.send(formData);
+            });
         });
     });
 </script>

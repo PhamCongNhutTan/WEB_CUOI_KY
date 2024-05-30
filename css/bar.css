@@ -20,23 +20,3 @@
     position: absolute;
     border-radius: 30rem!important;
 }
-.smallbar {
-    padding-top: 8px;
-    margin: 8px;
-    position: relative;
-}
-
-.smallbar::before {
-    content: "";
-    display: inline-block;
-    width: 7px;
-    /* Width of the vertical column */
-    height: 80%;
-    /* Height of the vertical column */
-    background-color: gray;
-    /* Color of the vertical column */
-    margin-right: 10px;
-    /* Align the column with the text */
-    position: absolute;
-    margin-left: -23px;
-}

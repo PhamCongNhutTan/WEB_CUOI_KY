@@ -10,9 +10,8 @@ if (isset($_POST["addCart"])) {
     $tourID = $_POST["tourid"];
     $exist = false;
     $amount = $_POST["amount"];
-    $date = $_POST["date"];
     foreach ($_SESSION["cart"] as $key => $item) {
-        if ($item["tourID"] == $tourID && $item["date"] == $date) {
+        if ($item["tourID"] == $tourID) {
             $_SESSION["cart"][$key]["amount"] = $item["amount"] + $amount;
             $exist = true;
             echo "test";
@@ -22,20 +21,15 @@ if (isset($_POST["addCart"])) {
     if ($exist == false) {
         $cart = array(
             "tourID" => $tourID,
-            "amount" => $amount,
-            "date" => $date
+            "amount" => $amount
         );
         $_SESSION["cart"][] = $cart;
     }
 }
-if (isset($_GET["action"]) && $_GET["action"] == "remove" && isset($_GET["key"])) {
-    $inputKey = $_GET["key"];
-    if($inputKey == "all"){
-        unset($_SESSION["cart"]);
-        header("Location:../index.php?quanly=giohang");
-    }
+if (isset($_GET["action"]) && $_GET["action"] == "remove" && isset($_GET["tourid"])) {
+    $tourID = $_GET["tourid"];
     foreach ($_SESSION["cart"] as $key => $item) {
-        if ($key == $inputKey) {
+        if ($item["tourID"] == $tourID) {
             unset($_SESSION["cart"][$key]);
             // Re-index the array to avoid potential issues with array keys
             $_SESSION["cart"] = array_values($_SESSION["cart"]);

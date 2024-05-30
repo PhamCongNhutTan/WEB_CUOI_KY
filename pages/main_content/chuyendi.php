@@ -1,3 +1,4 @@
+
 <div id="notification" style="width: 300px; position: fixed; top: 100px; right: 10px;" class="mt-3 d-none text-center alert alert-success alert-dismissible" role="alert">Thêm chuyến đi thành công</div>
 <div class="container" id="chuyendi">
     <?php
@@ -24,7 +25,12 @@
                             <p class="two-line-text">' . $tour->getDescription() . '</p>
                             <form class="" action="./?quanly=chitietchuyendi&tourid=' . $tour->getTourID() . '" method="POST"' . '">
                               <input class="d-none" name="tourid" type="text" value="' . $tour->getTourID() . '"> 
-                              <button style="text-wrap: nowrap;" type="submit" name="addCart" class="btn-by-tour">Xem chi tiết</button>
+                              <button style="text-wrap: nowrap;" type="submit" name="WaddCart" class="btn-by-tour">Chi tiết</button>
+                            </form>
+                            <form class="d-flex" id="addCartForm" method="POST">
+                              <input class="d-none" name="tourid" type="text" value="' . $tour->getTourID() . '"> 
+                              <button style="text-wrap: nowrap;" type="submit" name="addCart" class="btn-by-tour">Thêm vào giỏ hàng</button>
+                              <input style="width: 13%;"class="ms-3 form-control p-0 m-0 ps-4" type="number" name="amount" id="amount" value="1" min="1">    
                             </form>
                         </div>
                     </div>
