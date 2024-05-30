@@ -13,7 +13,7 @@ include("../config/config.php");
         $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
 
         $sql_insert = "INSERT INTO User(Email,Password,Phone,ImagePath,Role) 
-        VALUES ('$email', '$pass', '$phone', '$hinhanh', 'client');";
+        VALUES ('$email', '$pass', '$phone', NULL, 'client');";
         $getUserID = "SELECT User_ID FROM User WHERE Email = '$email'";
         
 
