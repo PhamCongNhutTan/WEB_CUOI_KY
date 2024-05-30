@@ -9,6 +9,8 @@ $row = mysqli_fetch_array($query_user);
 $rowi4 = mysqli_fetch_assoc($query_useri4);
 
 $birth = $rowi4['Birth'];
+$date = DateTime::createFromFormat('Y-m-d', $birth);
+$formatted_birth = $date->format('d-m-Y');
 
 ?>
 
@@ -48,8 +50,8 @@ $birth = $rowi4['Birth'];
                             <label class="form-label">Giới tính</label>
                         </div>
                         <div class="form-outline mb-4">
-                            <input type="text" id="birth" name="birth" class="form-control form-control-lg" value="<?php echo $birth; ?>" disabled>
-                            <label class="form-label">Ngày sinh: Năm-Tháng-Ngày</label>
+                            <input type="text" id="birth" name="birth" class="form-control form-control-lg" value="<?php echo $formatted_birth; ?>" disabled>
+                            <label class="form-label">Ngày sinh</label>
                         </div>
                         <div class="form-outline mb-4">
                             <input id="imagePath" type="file" name="hinhanh" class="form-control form-control-lg" value="<?php echo $row['ImagePath']; ?>" disabled />

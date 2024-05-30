@@ -28,7 +28,7 @@ include("../config/config.php");
         
         $userIDString = strval($userID);
         $sql_insert_infor = "INSERT INTO User_Info(User_ID,Username,Gender,Birth) 
-        VALUES ('$userIDString','Chưa cập nhật', 'Nam', '2004-01-01')";
+        VALUES ('$userIDString','Chưa cập nhật', 'Nam', STR_TO_DATE('31-12-2023', '%d-%m-%Y'))";
         mysqli_query($mysqli, $sql_insert_infor);
         move_uploaded_file($hinhanh_tmp, 'avatar/'.$hinhanh);
         if($kiemTraDK){
@@ -72,7 +72,7 @@ include("../config/config.php");
         mysqli_query($mysqli, $sql_update);
         
         $sql_update2 = "UPDATE User_Info SET 
-            Username='".$username."',Gender='".$gender."',Birth='".$birth."' 
+            Username='".$username."',Gender='".$gender."',Birth=STR_TO_DATE('$birth', '%d-%m-%Y') 
             WHERE User_ID ='".$userID."'";
             mysqli_query($mysqli, $sql_update2);
         header('Location:../index.php?quanly=taikhoan');
