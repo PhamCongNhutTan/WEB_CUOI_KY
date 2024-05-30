@@ -33,6 +33,10 @@
             <input type="text" class="form-control" id="" name="location">
         </div>
         <div class="form-group mt-3">
+            <label for="">Google Map</label>
+            <input type="text" class="form-control" id="" name="google">
+        </div>
+        <div class="form-group mt-3">
             <label for="">Mô tả</label>
             <textarea rows="2" class="form-control" id="description" name="description"></textarea>
         </div>

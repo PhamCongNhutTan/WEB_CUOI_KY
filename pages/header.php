@@ -15,24 +15,24 @@ if ((isset($_GET["quanly"]) && ($_GET["quanly"] != "chitietchuyendi" && $_GET["q
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="images/banner1.jpg" class="d-block w-100" alt="banner1">
-                    <div class="carousel-caption d-none d-md-block">
+                    <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="carousel-item">
                     <img src="images/banner5.jpg" class="d-block w-100" alt="banner2">
-                    <div class="carousel-caption d-none d-md-block">
+                    <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="carousel-item">
                     <img src="images/banner4.jpg" class="d-block w-100" alt="banner3">
-                    <div class="carousel-caption d-none d-md-block">
+                    <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
                         <p>Some representative placeholder content for the third slide.</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"

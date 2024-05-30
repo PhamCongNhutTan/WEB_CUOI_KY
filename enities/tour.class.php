@@ -8,6 +8,7 @@
         private $type;
         private $description;
         private $detail;
+        private $google;
 
         /**
          * Get the value of tourID
@@ -165,6 +166,26 @@
         public function setDetail($detail)
         {
                 $this->detail = $detail;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of google
+         */ 
+        public function getGoogle()
+        {
+                return $this->google;
+        }
+
+        /**
+         * Set the value of google
+         *
+         * @return  self
+         */ 
+        public function setGoogle($google)
+        {
+                $this->google = $google;
 
                 return $this;
         }

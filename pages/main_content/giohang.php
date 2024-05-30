@@ -27,9 +27,9 @@ if (!isset($_SESSION["User_ID"])) {
                             <h7 id="date"><?php echo $formattedDate ?></h7>
                         </div>
                         <div class="buy-price d-flex position-absolute">
-                            <button type="button" id="decrement" onclick="stepper(this)"> - </button>
+                            <button class="button" type="button" id="decrement" onclick="stepper(this)"> - </button>
                             <input style="width: 40px; height: 40px;" class="mx-2 numeric form-control p-0 m-0 ps-3" type="number" name="amount" id="amount" value="1" min="1" max="100" step="1" onchange="updateTotal(this)" readonly>
-                            <button type="button" id="increment" onclick="stepper(this)"> + </button>
+                            <button class="button" type="button" id="increment" onclick="stepper(this)"> + </button>
                         </div>
                         <div class="cart-price" id="price"><?php echo number_format($tour->getBasePrice(), 0, '', ',') ?> ₫</div>
                         <button type="button" id="" class="btn btn-danger nohover"><a style="text-decoration:none; color:white;" href="./modules/cart.php?action=remove&key=<?php echo $key ?>"><i class="bi bi-trash"></i></a></button>

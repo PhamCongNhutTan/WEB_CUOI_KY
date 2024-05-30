@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/chuyendi.css" type="text/css">
     <link rel="stylesheet" href="css/modalLogin.css">
-    <link rel="stylesheet" href="css/chitietchuyendi.css" type="text/css">
     <link rel="stylesheet" href="css/lienhe.css" type="text/css">
     <link rel="stylesheet" href="css/tintuc.css" type="text/css">
     <link rel="stylesheet" href="css/bar.css" type="text/css">
     <link rel="stylesheet" href="css/modalLogin.css" type="text/css">
+    <link rel="stylesheet" href="css/chitietchuyendi.css" type="text/css">
     <link rel="stylesheet" href="css/binhluan.css" type="text/css">
     <link rel="stylesheet" href="css/toggleAvatar.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,9 +38,11 @@
         include ("./config/config.php");
         include ("./enities/user.class.php");
         include ("./enities/tour.class.php");
+        include ("./enities/book.class.php");
         include ("./enities/review.class.php");
         include ("./modules/tour_controller.php");
         include ("./modules/review_controller.php");
+        include ("./modules/book_controller.php");
         if (isset($_SESSION["dangnhap"]) && isset($_SESSION["User_ID"])) {
             $user = new User($_SESSION["User_ID"]);
         }

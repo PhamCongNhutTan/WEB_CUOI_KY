@@ -52,6 +52,10 @@ $tour = TourController::getTourByID($tourID);
             <input type="text" class="form-control" id="" name="location" value="<?php echo $tour->getLocation() ?>">
         </div>
         <div class="form-group mt-3">
+            <label for="">Google Map</label>
+            <input type="text" class="form-control" id="" name="google" value="<?php echo $tour->getGoogle() ?>">
+        </div>
+        <div class="form-group mt-3">
             <label for="">Mô tả</label>
             <textarea rows="2" class="form-control" id="description" name="description"><?php echo $tour->getDescription() ?></textarea>
         </div>

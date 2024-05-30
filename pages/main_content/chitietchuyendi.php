@@ -17,7 +17,7 @@
             <img class="tourImage" style="max-width: 100%" src='./images/tour/<?php echo $tour->getTourID() ?>/<?php echo $tour->getImagePath() ?>'>
         </div>
         <div class="col-4 p-1">
-            <iframe class="map" style="width: 100%; height: 100%;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30990.256973994987!2d100.6972529!3d13.852113!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d630d80329d73%3A0x5d1594b915327b6c!2sSafari%20World!5e0!3m2!1svi!2s!4v1716964522042!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map" style="width: 100%; height: 100%;" src="<?php echo $tour->getGoogle()  ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     <div class="row border-0 my-3">
@@ -29,12 +29,12 @@
         </div>
         <div class="col-12 col-md-4">
             <div class="buy">
-                <form id="addCartForm" method="POST" action="">
+                <form id="addCartForm" method="POST" action="" id="giohang">
                     <p class="buy-price d-flex">
                         <h7 class="me-3 pt-2"><?php echo $tour->getBasePrice() ?> ₫</h7>
-                        <button type="button" id="decrement" onclick="stepper(this)"> - </button>
+                        <button class="button" type="button" id="decrement" onclick="stepper(this)"> - </button>
                         <input style="width: 20%;" class="mx-2 numeric form-control p-0 m-0 ps-4" type="number" name="amount" id="amount" value="1" min="1" max="100" step="1" readonly>
-                        <button type="button" id="increment" onclick="stepper(this)"> + </button>
+                        <button class ="button" type="button" id="increment" onclick="stepper(this)"> + </button>
                     </p>
                     <input type="date" id="date" name="date" class="date form-control my-3" style="width: 50%;">
                     <input class="d-none" id="tourid" name="tourid" type="text" value="<?php echo $tour->getTourID() ?>">
@@ -96,6 +96,10 @@
         var tourID = addForm.querySelector("#tourid").value;
         var amount = parseInt(addForm.querySelector("#amount").value);
         var date = addForm.querySelector("#date").value;
+        if(!date){
+            
+            return;
+        }
         selectedItems.push({tourID, amount, date});
         console.log(selectedItems);
         var form = document.createElement("form");

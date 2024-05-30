@@ -10,6 +10,8 @@
             ?>
             <div class="btn-container"><button class="btn-avatar-toggle"><a href="index.php?quanly=giohang">
                         <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></button></div>
+            <div class="btn-container"><button class="btn-avatar-toggle"><a href="index.php?quanly=donhang">
+                        <i class="fa-solid fa-money-bill"></i>Đơn hàng</a></button></div>
             <div class="btn-container"><button class="btn-avatar-toggle"><a href="index.php?quanly=taikhoan">
                         <i class="fa-solid fa-user"></i></i>Tài khoản</a></button></div>
             <div class="btn-container"><button class="btn-avatar-toggle" style="padding-right: 0px; margin-right: 10px"><a href="index.php?quanly=doimatkhau">

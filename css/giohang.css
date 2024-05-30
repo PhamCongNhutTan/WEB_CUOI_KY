@@ -9,7 +9,12 @@
     height: 1.3em;
     padding-bottom: 1em;
 }
-
+.bookPrice{
+    position: absolute;
+    bottom: 15px;
+    right: 0px;
+    font-weight: 500;
+}
 .cart {
     background-color: #d4e9eb6b;
     border-radius: 1.2rem;
@@ -48,6 +53,9 @@
     margin: 0px 20px;
     position: absolute;
     right: 0px;
+    color: #fff !important;
+    background-color: #bb2d3b !important;
+    border-color: #b02a37 !important;
 }
 
 .nohover:hover {

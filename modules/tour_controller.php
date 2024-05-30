@@ -22,6 +22,7 @@ class TourController
                 $tour->setType($row["Type"]);
                 $tour->setDescription($row["Description"]);
                 $tour->setDetail($row["Detail"]);
+                $tour->setGoogle($row["Google"] != "" ? $row["Google"] : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31351.455727959274!2d106.6237642982573!3d10.816518513596376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1717052489377!5m2!1svi!2s");
                 $tours[] = $tour;
             }
         }
@@ -43,9 +44,10 @@ class TourController
         $tour->setType($row["Type"]);
         $tour->setDescription($row["Description"]);
         $tour->setDetail($row["Detail"]);
+        $tour->setGoogle($row["Google"] != "" ? $row["Google"] : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31351.455727959274!2d106.6237642982573!3d10.816518513596376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1717052489377!5m2!1svi!2s");
         return $tour;
     }
-    public static function addTour($name, $location, $description, $basePrice, $imagePath, $temp_imagePath, $detail)
+    public static function addTour($name, $location, $description, $basePrice, $imagePath, $temp_imagePath, $detail, $google)
     {
         global $mysqli;
         $type = "Đang mở";
@@ -60,19 +62,19 @@ class TourController
         // Thêm Tour
         $detail = str_replace("'", '"', $detail);
         $description = str_replace("'", '"', $description);
-        $query = "INSERT INTO Tour(Name, Location, BasePrice, ImagePath, Type, Description, Detail) VALUES ('" . $name . "', '" . $location . "', '" . $basePrice . "', '" . $imagePath . "', '" . $type . "', '" . $description . "', '" . $detail . "')";
+        $query = "INSERT INTO Tour(Name, Location, BasePrice, ImagePath, Type, Description, Detail, Google) VALUES ('" . $name . "', '" . $location . "', '" . $basePrice . "', '" . $imagePath . "', '" . $type . "', '" . $description . "', '" . $detail . "', '".$google."')";
         $result = mysqli_query($mysqli, $query);
         $move = move_uploaded_file($temp_imagePath, $tourImagesPath . "/" . $imagePath);
         return $result && $move;
     }
-    public static function editTour($tourID, $name, $location, $description, $type, $basePrice, $imagePath, $temp_imagePath, $detail)
+    public static function editTour($tourID, $name, $location, $description, $type, $basePrice, $imagePath, $temp_imagePath, $detail, $google)
     {
-        global $mysqli;
+        global $mysqli;;
         $detail = str_replace("'", '"', $detail);
         $description = str_replace("'", '"', $description);
-        $query = "UPDATE Tour SET Name='" . $name . "', Location='" . $location . "', Description='" . $description . "', BasePrice='" . $basePrice . "', ImagePath='" . $imagePath . "', Type='" . $type . "', Detail='" . $detail . "' WHERE Tour_ID = " . $tourID;
+        $query = "UPDATE Tour SET Name='" . $name . "', Location='" . $location . "', Description='" . $description . "', BasePrice='" . $basePrice . "', ImagePath='" . $imagePath . "', Type='" . $type . "', Detail='" . $detail . "', Google = '".$google."' WHERE Tour_ID = " . $tourID;
         if ($temp_imagePath == "") {
-            $query = "UPDATE Tour SET Name='" . $name . "', Location='" . $location . "', Description='" . $description . "', BasePrice='" . $basePrice . "', Type='" . $type . "', Detail='" . $detail . "' WHERE Tour_ID = " . $tourID;
+            $query = "UPDATE Tour SET Name='" . $name . "', Location='" . $location . "', Description='" . $description . "', BasePrice='" . $basePrice . "', Type='" . $type . "', Detail='" . $detail . "', Google = '".$google."' WHERE Tour_ID = " . $tourID;
         }
         $result = mysqli_query($mysqli, $query);
         $path = "../../../images/tour/" . $tourID . "/" . $imagePath;

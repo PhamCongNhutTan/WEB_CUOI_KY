@@ -25,6 +25,8 @@
         include('main_content/doimatkhau.php');
     } else if ($temp == "chitietchuyendi") {
         include('pages/main_content/chitietchuyendi.php');
+    } else if ($temp == "donhang") {
+        include('pages/main_content/donhang.php');
     } else {
         include('main_content/trangchu.php');
     }
