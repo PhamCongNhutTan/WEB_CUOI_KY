@@ -17,6 +17,9 @@
             <a class="nav-link" href="index.php?action=quanlybinhluan&query=xem">Quản lý bình luận</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="index.php?action=quanlyvedat&query=view">Quản lý vé đặt</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="index.php?action=thongtinlienhe&query=xem">Thông tin liên hệ</a>
           </li>
         </ul>
