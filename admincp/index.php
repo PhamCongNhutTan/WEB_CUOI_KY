@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/quanlytintuc.css" type="text/css">
     <link rel="stylesheet" href="css/thongtinlienhe.css" type="text/css">
     <link rel="stylesheet" href="css/quanlychuyendi.css" type="text/css">
+    <link rel="stylesheet" href="css/toggleAvatar.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 </head>
