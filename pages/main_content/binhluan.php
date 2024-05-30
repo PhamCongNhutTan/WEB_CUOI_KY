@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-top: 50px; padding-top: 50px; border-top: 1px solid grey;">
     <div class="row">
         <div class="col-12 col-lg-6">
             <div class="container-fluid" id="binhluan">
@@ -48,8 +48,7 @@
                             <label for="4-stars" class="star"><i class="fas fa-star"></i></label>
                             <input type="radio" id="5-stars" name="rating" value="5" />
                             <label for="5-stars" class="star"><i class="fas fa-star"></i></label>
-                        </div><br><br>
-
+                        </div>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
                             name="noidungbinhluan"></textarea>
                         <button class="btn-success" type="submit" name="dangbinhluan">Gửi</button>
@@ -63,7 +62,7 @@
         </div>
         <div class="col-12 col-lg-6">
             <div class="container-fluid" id="binhluan-list">
-                <h4>Bình luận</h4>
+                <h4>Đánh giá của khách hàng</h4>
                 <?php
                 $reviewController = new ReviewController();
                 $reviewList = $reviewController->getReviews();
